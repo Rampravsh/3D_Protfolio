@@ -2,7 +2,12 @@ import React from 'react'
 
 const App = () => {
   return (
-    <div>App</div>
+    <main>
+      <div>
+        <h1>Welcome to my 3D Protfolio</h1>
+        <p>Explore my work and skills</p>
+      </div>
+    </main>
   )
 }
 
