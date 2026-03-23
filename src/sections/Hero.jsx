@@ -3,10 +3,6 @@ import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 
 const Hero = () => {
-    const words = [
-        { text: 'Ideas', imgPath: '/images/ideas.svg' },
-        { text: 'Concepts', imgPath: '/images/Concepts.svg' }
-    ]
     const containerRef = useRef(null)
 
     useGSAP(() => {
