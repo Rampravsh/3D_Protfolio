@@ -1,13 +1,13 @@
 import { useRef } from "react";
 
-const GlowCard = ({ card, index, children }) => {
-  // refs for all the cards
-  const cardRefs = useRef([]);
+const GlowCard = ({ card, children }) => {
+  // ref for the card
+  const cardRef = useRef(null);
 
   // when mouse moves over a card, rotate the glow effect
-  const handleMouseMove = (index) => (e) => {
+  const handleMouseMove = (e) => {
     // get the current card
-    const card = cardRefs.current[index];
+    const card = cardRef.current;
     if (!card) return;
 
     // get the mouse position relative to the card
@@ -28,8 +28,8 @@ const GlowCard = ({ card, index, children }) => {
   // return the card component with the mouse move event
   return (
     <div
-      ref={(el) => (cardRefs.current[index] = el)}
-      onMouseMove={handleMouseMove(index)}
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
       className="card card-border timeline-card rounded-xl p-10 mb-5 break-inside-avoid-column"
     >
       <div className="glow"></div>
@@ -47,3 +47,4 @@ const GlowCard = ({ card, index, children }) => {
 };
 
 export default GlowCard;
+
