@@ -30,7 +30,7 @@ const Hero = () => {
             </div>
             <div className='hero-layout '>
                 {/* LEFT: HERO CONTENT */}
-                <header className='flex flex-col justify-center md:w-full w-screen md:px-20 px-5 '>
+                <header className='flex flex-col justify-center md:w-full w-full md:px-20 px-5 '>
                     <div className='flex flex-col gap-7'>
                         <div className='hero-text pt-24 md:pt-32' ref={containerRef}>
                             <h1 className='text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tighter mb-6'>

@@ -1,4 +1,3 @@
-import React from 'react';
 import { SpotLight } from '@react-three/drei';
 
 const HeroLight = () => {
