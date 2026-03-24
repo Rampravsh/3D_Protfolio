@@ -1,17 +1,33 @@
-import React from 'react'
+const Button = ({ text, href, id, className, ...props }) => {
+  const commonProps = {
+    id,
+    className: `${className ?? ""} cta-wrapper`,
+    ...props,
+  };
 
-const Button = ({ text, id, className }) => {
+  const buttonContent = (
+    <div className="cta-button group">
+      <div className="bg-circle" />
+      <p className="text">{text}</p>
+      <div className="arrow-wrapper">
+        <img src="/images/arrow-down.svg" alt="arrow" />
+      </div>
+    </div>
+  );
+
+  if (href) {
     return (
-        <a className={`${className ?? ""} cta-wrapper`}>
-            <div className='cta-button group'>
-                <div className='bg-circle' />
-                <p className='text'>{text}</p>
-                <div className='arrow-wrapper'>
-                    <img src="/images/arrow-down.svg" alt="arrow" />
-                </div>
-            </div>
-        </a>
-    )
-}
+      <a href={href} {...commonProps}>
+        {buttonContent}
+      </a>
+    );
+  }
 
-export default Button
+  return (
+    <button type="button" {...commonProps}>
+      {buttonContent}
+    </button>
+  );
+};
+
+export default Button;
