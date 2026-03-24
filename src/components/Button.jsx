@@ -1,15 +1,17 @@
 import React from "react";
 
-const Button = ({ text, id, className }) => {
+const Button = ({ text, targetId = "counter", className }) => {
   return (
-    <a
+    <button
+      type="button"
       onClick={(e) => {
         e.preventDefault();
-        const target =document.getElementById('counter')
-        if(target&&id){
-            const offset =window.innerHeight*0.15;
-            const top = target.getBoundingClientRect().top + window.scrollY - offset;
-            window.scrollTo({top, behavior: 'smooth'})
+        const target = document.getElementById(targetId);
+        if (target) {
+          const offset = window.innerHeight * 0.15;
+          const top =
+            target.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({ top, behavior: "smooth" });
         }
       }}
       className={`${className ?? ""} cta-wrapper`}
@@ -21,7 +23,7 @@ const Button = ({ text, id, className }) => {
           <img src="/images/arrow-down.svg" alt="arrow" />
         </div>
       </div>
-    </a>
+    </button>
   );
 };
 

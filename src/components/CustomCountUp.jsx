@@ -4,7 +4,13 @@ const CustomCountUp = ({ end, suffix, duration = 2000 }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
+    if (duration <= 0) {
+      setCount(end);
+      return;
+    }
+
     let startTime;
+    let rafId;
     const animateCount = (timestamp) => {
       if (!startTime) {
         startTime = timestamp;
@@ -13,10 +19,12 @@ const CustomCountUp = ({ end, suffix, duration = 2000 }) => {
       const percentage = Math.min(progress / duration, 1);
       setCount(Math.floor(percentage * end));
       if (progress < duration) {
-        requestAnimationFrame(animateCount);
+        rafId = requestAnimationFrame(animateCount);
       }
     };
-    requestAnimationFrame(animateCount);
+    rafId = requestAnimationFrame(animateCount);
+
+    return () => cancelAnimationFrame(rafId);
   }, [end, duration]);
 
   return (

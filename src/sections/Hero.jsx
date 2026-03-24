@@ -57,7 +57,7 @@ const Hero = () => {
               <div className="flex flex-wrap gap-4 pointer-events-auto justify-center md:justify-start">
                 <Button
                   className="md:w-80 w-full max-w-[320px] h-12"
-                  id="button"
+                  targetId="counter"
                   text="See My Work"
                 />
               </div>
