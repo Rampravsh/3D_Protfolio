@@ -5,7 +5,6 @@ const App = () => {
   return (
     <>
       <Hero />
-      <div className='w-screen h-screen'></div>
     </>
   )
 }
