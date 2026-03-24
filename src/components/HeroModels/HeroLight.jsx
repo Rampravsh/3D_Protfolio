@@ -15,6 +15,7 @@ const HeroLight = () => {
         castShadow
         color="#ffffff"
       />
+      
       <directionalLight position={[-5, 5, 5]} intensity={0.8} color="#ffffff" />
     </>
   );

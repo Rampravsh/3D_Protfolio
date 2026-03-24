@@ -24,7 +24,7 @@ const Hero = () => {
     }, { scope: containerRef })
 
     return (
-        <section id='hero' className='relative overflow-hidden'>
+        <section id='hero' className='relative overflow-hidden '>
             <div className='absolute top-0 left-0 z-10 w-full h-full'>
                 <img src="/images/bg.png" alt="background" className="w-full h-full object-cover" />
             </div>
@@ -39,9 +39,9 @@ const Hero = () => {
                             <p className='text-lg sm:text-xl text-gray-400 max-w-lg mb-8 leading-relaxed font-light'>
                                 Hi, I'm a creative developer with a passion for blending code and creativity. I build interactive web experiences that captivate users, pushing the boundaries of digital artistry and performance.
                             </p>
-                            <div className='flex flex-wrap gap-4 pointer-events-auto'>
+                            <div className='flex flex-wrap gap-4 pointer-events-auto justify-center md:justify-start'>
                                 <Button
-                                    className="md:w-80 w-80 h-12"
+                                    className="md:w-80 w-full max-w-[320px] h-12"
                                     id='button'
                                     text='See My Work'
                                 />
@@ -52,7 +52,7 @@ const Hero = () => {
                 </header>
                 {/* RIGHT: HERO 3D MODEL */}
                 <figure>
-                    <div className='hero-3d-layout '>
+                    <div className='hero-3d-layout'>
                         <HeroExperience />
                     </div>
                 </figure>
