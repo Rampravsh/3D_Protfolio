@@ -1,16 +1,55 @@
-# React + Vite
+# 3D Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal 3D Portfolio website built with React, Three.js, and GSAP.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **React 19** - Frontend library
+- **Vite** - Build tool and development server
+- **Three.js** & **React Three Fiber / Drei** - 3D graphics and interactive elements
+- **GSAP** - Smooth web animations
+- **Tailwind CSS (v4)** - Utility-first CSS framework
+- **EmailJS** - Email integration for the contact form
 
-## React Compiler
+## Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Follow these instructions to get the project up and running on your local machine.
 
-## Expanding the ESLint configuration
+### Prerequisites
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Node.js installed on your machine.
+
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone <repository-url>
+   ```
+2. Navigate to the project directory:
+   ```bash
+   cd 3D_Protfolio
+   ```
+3. Install the dependencies:
+   ```bash
+   npm install
+   ```
+
+### Running the Development Server
+
+Start the development server with the following command:
+
+```bash
+npm run dev
+```
+
+This will run the app in development mode. Open [http://localhost:5173](http://localhost:5173) (or the port specified in your terminal) to view it in the browser.
+
+## Building for Production
+
+To build the app for production, run:
+
+```bash
+npm run build
+```
+
+The optimized build will be generated in the `dist` folder.

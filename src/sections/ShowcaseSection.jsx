@@ -84,13 +84,14 @@ const ShowcaseSection = () => {
           {/* RIGHT */}
           <div className="project-list-wrapper overflow-hidden">
             <div className="project" ref={project2Ref}>
-              <div className="image-wrapper bg-[#ffefdb]">
+              <div className="image-wrapper bg-[#ffefdb] flex justify-center items-center">
                 <img
+                  className="w-[80%] h-[80%] object-fill rounded-xl border-12 border-black"
                   src="/images/project2.png"
                   alt="Library Management Platform"
                 />
               </div>
-              <h2>Library Management Platform</h2>
+              <h2>My first protfolio</h2>
             </div>
             <div className="project" ref={project3Ref}>
               <div className="image-wrapper bg-[#ffe7eb]">
