@@ -16,7 +16,7 @@ const ShowcaseSection = () => {
       gsap.set(project1Ref.current, { opacity: 1, y: 0 });
       gsap.set(project2Ref.current, { opacity: 1, y: 0 });
       gsap.set(project3Ref.current, { opacity: 1, y: 0 });
-      gsap.set(sectionRef.current, { opacity: 1, y: 0 });
+      gsap.set(sectionRef.current, { opacity: 1 });
       return;
     }
     const projects = [
@@ -50,7 +50,14 @@ const ShowcaseSection = () => {
       {
         opacity: 0,
       },
-      { opacity: 1, duration: 1.5 },
+      {
+        opacity: 1,
+        duration: 1.5,
+        scrollTrigger: {
+          trigger: sectionRef.current,
+          start: "top 80%",
+        },
+      },
     );
   }, []);
 
