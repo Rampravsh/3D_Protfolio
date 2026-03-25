@@ -1,4 +1,4 @@
-import { OrbitControls } from "@react-three/drei";
+import { OrbitControls, Html } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
 import { Room } from "./Room";
@@ -24,7 +24,7 @@ const HeroExperience = () => {
         position={[0, -2, 0]}
         rotation={[0, -Math.PI / 4, 0]}
       >
-        <Suspense fallback={null}>
+        <Suspense fallback={<Html center>Loading...</Html>}>
           <Room isMobile={isMobile} />
         </Suspense>
       </group>
