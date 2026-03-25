@@ -3,11 +3,12 @@ import { Canvas } from "@react-three/fiber";
 import { useMediaQuery } from "react-responsive";
 import { Room } from "./Room";
 import HeroLight from "./HeroLight";
+import { Suspense } from "react";
 
 const HeroExperience = () => {
   const isMobile = useMediaQuery({ query: "(max-width:768px)" });
   return (
-    <Canvas shadows camera={{ position: [0, 0, 15], fov: 45 }}>
+    <Canvas shadows={!isMobile} dpr={[1, 1.5]} camera={{ position: [0, 0, 15], fov: 45 }}>
       <HeroLight />
 
       <OrbitControls
@@ -23,7 +24,9 @@ const HeroExperience = () => {
         position={[0, -2, 0]}
         rotation={[0, -Math.PI / 4, 0]}
       >
-        <Room />
+        <Suspense fallback={null}>
+          <Room isMobile={isMobile} />
+        </Suspense>
       </group>
     </Canvas>
   );

@@ -86,7 +86,7 @@ const ShowcaseSection = () => {
             <div className="project" ref={project2Ref}>
               <div className="image-wrapper bg-[#ffefdb] flex justify-center items-center">
                 <img
-                  className="w-[80%] h-[80%] object-fill rounded-xl border-12 border-black"
+                  className="w-auto h-[80%] object-fill rounded-xl border-12 border-black"
                   src="/images/project2.png"
                   alt="Library Management Platform"
                 />
@@ -94,8 +94,8 @@ const ShowcaseSection = () => {
               <h2>My first protfolio</h2>
             </div>
             <div className="project" ref={project3Ref}>
-              <div className="image-wrapper bg-[#ffe7eb]">
-                <img src="/images/project3.png" alt="YC Directory" />
+              <div className="image-wrapper bg-[#ffe7eb] flex justify-center items-center">
+                <img src="/images/project3.png" alt="YC Directory" className="w-auto h-[80%] object-fill rounded-xl border-12 border-black" />
               </div>
               <h2>YC Directory - A Startup Showcase</h2>
             </div>
